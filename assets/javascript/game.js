@@ -32,26 +32,29 @@ document.onkeyup = function(event) {
     
 // create if statement for when you choose right
     // computer chooses new number ??????
+    if (userGuess){
 
-    if (userGuess === computerChoice) {
-        alert("WINNER WINNER CHICKEN DINNER!")
-        wins += wins;
-        guesses = 9;
-        userAttempts.length = 0
-    }
-    // create if statment for when you choose wrong
-        // decrease guesses
-            // if guesses < 0 reset game (firgure out how it chooses new number)
-    else {
-        guesses -= guesses; 
-        if ( guesses === 0){
-            alert("YOU LOSE");
-            losses += losses;
+    
+        if (userGuess === computerChoice) {
+            alert("WINNER WINNER CHICKEN DINNER!")
+            wins = wins + 1;
             guesses = 9;
             userAttempts.length = 0
         }
-    }
+        // create if statment for when you choose wrong
+            // decrease guesses
+                // if guesses < 0 reset game (firgure out how it chooses new number)
+        else {
+            guesses = guesses - 1; 
 
+            if ( guesses === 0){
+                alert("YOU LOSE");
+                losses = losses + 1;
+                guesses = 9;
+                userAttempts.length = 0
+            }
+        }
+    }
 
 // display wins and losses and user choice
 
