@@ -1,15 +1,20 @@
 body {
     background-image: url(../images/dog-psychic.jpg);
     background-size: 100%;
+    width: 100%;
 }
 h1 {
     text-align: center;
-    font-size: 160%;
-    font-family: 'Pacifico', cursive;
-
+    font-size: 300%;
+    font-family: cursive;
+    color: fuchsia;
+    padding: 5%;
+    font-weight: bolder;
 }
 p{
-    font-family: 'Indie Flower', cursive;
+    font-family: cursive;
+    color: fuchsia;
+    font-size: 200%;
 }
 
 .start {

@@ -30,17 +30,18 @@ document.onkeyup = function(event) {
         // Determines which key was pressed.
         var userGuess = event.key;
         
-        // create if statement for when you choose right
         // computer chooses new number ??????
         if (computerOptions.indexOf(userGuess) > -1){
-        
+            
             if (userAttempts.includes(userGuess) === false) {
                 userChoiceText.textContent = "You chose: " + userGuess; 
-
+                
                 userAttempts.push(userGuess)
-        
+                
+                // create if statement for when you choose right
                 if (userGuess === computerChoice) {
-                    alert("WINNER WINNER CHICKEN DINNER!")
+                    alert("Lucky Guess")
+                    alert("Give me a treat");
                     wins = wins + 1;
                     guesses = 9;
                     userAttempts.length = 0
@@ -54,6 +55,7 @@ document.onkeyup = function(event) {
 
                     if ( guesses === 0){
                         alert("YOU LOSE");
+                        alert("Give me a treat");
                         losses = losses + 1;
                         guesses = 9;
                         userAttempts.length = 0
